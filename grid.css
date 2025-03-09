@@ -20,6 +20,8 @@
     width: 100%;
     max-width: 1200px; /* Set a maximum width to prevent it from getting too wide */
     color: white;  /* Make sure the text is white for readability */
+    border-left: 1px solid white;  /* Add white left border */
+    border-right: 1px solid white; /* Add white right border */
 }
 
 /* Row Styles */
