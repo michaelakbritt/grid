@@ -1,102 +1,132 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
 }
 
 /* ==== GRID SYSTEM ==== */
 
+/* Center the grid on the page using flexbox */
+.parent-container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    min-height: 100vh;         /* Full viewport height */
+    background: linear-gradient(to right, rgba(0, 128, 0, 1), rgba(34, 193, 195, 1)); /* Green gradient */
+}
 
-
-
+/* Styling for the grid container */
 .container {
-  width: 96%;
-  margin:auto;
-  color:white;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width to prevent it from getting too wide */
+    color: white;  /* Make sure the text is white for readability */
 }
 
+/* Row Styles */
 .row {
-  position: relative;
-  width: 100%;
-  
+    position: relative;
+    width: 100%;
 }
 
+/* Column Styles (keeping existing widths, adjusting background and adding readability) */
 .row [class^="col"] {
-  float: left;
-  margin: 0% 0%;
-  min-height: 0.125rem;
+    float: left;
+    margin: 0 0;
+    min-height: 0.125rem;
+    padding: 15px;  /* Padding for spacing inside the columns */
+    box-sizing: border-box;  /* Ensure padding doesn't affect width */
+    text-align: center;  /* Center text horizontally */
 }
 
-
+/* Column widths with updated RGBA color for visibility */
 .col-1 {
     width: 8.33%;
-    background: rgba(102,51,153,.1);
-  }
-
-  .col-2 {
-    width: 16.66%;
-    background: rgba(102,51,153,.2);
-  }
-
-  .col-3 {
-    width: 25%;
-    background: rgba(102,51,153,.3);   
-  }
-
-  .col-4 {
-    width: 33.33%;
-    background: rgba(102,51,153,.4);
-  }
-
-  .col-5 {
-    width: 41.67%;
-    background: rgba(102,51,153,.5);
-  }
-
-  .col-6 {
-    width: 50%;
-    background: rgba(102,51,153,.5);
-  }
-  
-
-  .col-7 {
-    width: 58.33%;
-    background: rgba(102,51,153,.57);
-  }
-
-  .col-8 {
-    width: 66.67%;
-    background: rgba(102,51,153,.64);
-  }
-
-  .col-9 {
-    width: 75%;
-    background: rgba(102,51,153,.75);
-  }
-
-  .col-10 {
-    width: 83.33%;
-    background: rgba(102,51,153,.82);
-  }
-
-  .col-11 {
-    width: 91.67%;
-    background: rgba(102,51,153,.89);
-  }
-
-  .col-12 {
-    width: 100%;
-    background: rgba(102,51,153,1);
-  }
-
-/* This is clearfix, clearing content after each row*/
-.row::after {
-	content: "";
-	display: table;
-	clear: both;
+    background: rgba(102, 51, 153, .1);
 }
 
+.col-2 {
+    width: 16.66%;
+    background: rgba(102, 51, 153, .2);
+}
+
+.col-3 {
+    width: 25%;
+    background: rgba(102, 51, 153, .3);
+}
+
+.col-4 {
+    width: 33.33%;
+    background: rgba(102, 51, 153, .4);
+}
+
+.col-5 {
+    width: 41.67%;
+    background: rgba(102, 51, 153, .5);
+}
+
+.col-6 {
+    width: 50%;
+    background: rgba(102, 51, 153, .5);
+}
+
+.col-7 {
+    width: 58.33%;
+    background: rgba(102, 51, 153, .57);
+}
+
+.col-8 {
+    width: 66.67%;
+    background: rgba(102, 51, 153, .64);
+}
+
+.col-9 {
+    width: 75%;
+    background: rgba(102, 51, 153, .75);
+}
+
+.col-10 {
+    width: 83.33%;
+    background: rgba(102, 51, 153, .82);
+}
+
+.col-11 {
+    width: 91.67%;
+    background: rgba(102, 51, 153, .89);
+}
+
+.col-12 {
+    width: 100%;
+    background: rgba(102, 51, 153, 1);
+}
+
+/* This is clearfix, clearing content after each row */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Column heights and border for visibility */
 div [class^="col"] {
-    height:100px;
-    border: 1px solid white;
-   
+    height: 100px; /* Fixed height for visibility */
+    border: 1px solid white;  /* White borders between columns */
+}
+
+/* Ensure text is readable on background */
+body {
+    color: white; /* Ensure text is white for readability */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Additional media query to handle responsiveness */
+@media (max-width: 768px) {
+    .parent-container {
+        padding: 10px;  /* Add some space on mobile */
+    }
+
+    /* Stack columns vertically on smaller screens */
+    .row [class^="col"] {
+        width: 100%; /* Columns will take full width */
+        margin-bottom: 10px;  /* Space between stacked columns */
+    }
 }
