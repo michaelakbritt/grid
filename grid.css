@@ -20,6 +20,8 @@
     width: 100%;
     max-width: 1200px; /* Set a maximum width to prevent it from getting too wide */
     color: white;  /* Make sure the text is white for readability */
+    background: linear-gradient(to right, rgba(0, 128, 0, 1), rgba(34, 193, 195, 1));
+    padding: 0 10px; /* Add space for border to avoid content touching sides */
 }
 
 /* Row Styles */
