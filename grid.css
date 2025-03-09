@@ -12,7 +12,7 @@
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
     min-height: 100vh;         /* Full viewport height */
-    background: linear-gradient(to right, rgba(0, 128, 0, 1), rgba(34, 193, 195, 1)); /* Green gradient */
+    background: white; /* Green gradient */
 }
 
 /* Styling for the grid container */
@@ -20,8 +20,6 @@
     width: 100%;
     max-width: 1200px; /* Set a maximum width to prevent it from getting too wide */
     color: white;  /* Make sure the text is white for readability */
-    border-left: 1px solid white;  /* Add white left border */
-    border-right: 1px solid white; /* Add white right border */
 }
 
 /* Row Styles */
