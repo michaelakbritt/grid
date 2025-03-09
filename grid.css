@@ -118,12 +118,6 @@ body {
     font-family: Arial, sans-serif; /* Set a default font */
 }
 
-/* Additional media query to handle responsiveness */
-@media (max-width: 768px) {
-    .parent-container {
-        padding: 10px;  /* Add some space on mobile */
-    }
-
     /* Stack columns vertically on smaller screens */
     .row [class^="col"] {
         width: 100%; /* Columns will take full width */
