@@ -119,10 +119,3 @@ body {
     color: white; /* Ensure text is white for readability */
     font-family: Arial, sans-serif; /* Set a default font */
 }
-
-    /* Stack columns vertically on smaller screens */
-    .row [class^="col"] {
-        width: 100%; /* Columns will take full width */
-        margin-bottom: 10px;  /* Space between stacked columns */
-    }
-}
